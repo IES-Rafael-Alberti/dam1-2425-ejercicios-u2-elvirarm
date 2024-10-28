@@ -3,3 +3,8 @@ Mostrar un menú con tres opciones: 1- comenzar programa, 2- imprimir listado, 3
 
 
 """
+
+def main():
+
+if __name__ == "__main__":
+    main()

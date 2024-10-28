@@ -3,3 +3,8 @@ Crear un programa que permita al usuario ingresar los montos de las compras de u
 
 
 """
+
+def main():
+
+if __name__ == "__main__":
+    main()

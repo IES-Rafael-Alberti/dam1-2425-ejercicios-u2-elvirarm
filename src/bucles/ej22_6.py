@@ -13,13 +13,15 @@ def pedir_num():
     return num_altura
 
 def piramide(num_altura):
+    triangulo = ""
     for i in range (0,num_altura + 1):
-        triangulo = "*" * i
-        print (triangulo)
+        triangulo += "*" * i + "\n"
+
+    return triangulo
 
 def main():
     num_altura = pedir_num()
-    piramide(num_altura)
+    print(piramide(num_altura))
 
 
 if __name__ == "__main__":

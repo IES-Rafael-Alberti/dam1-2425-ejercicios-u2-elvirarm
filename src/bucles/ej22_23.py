@@ -15,3 +15,8 @@ Libro: *
 Fin. Se leyeron 2 líneas completas.
 
 """
+
+def main():
+
+if __name__ == "__main__":
+    main()

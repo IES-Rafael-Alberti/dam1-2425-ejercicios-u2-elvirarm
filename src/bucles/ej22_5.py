@@ -9,8 +9,6 @@ amount *= 1 + interest / 100
 """
 
 
-#COMPROBAR LUEGO, CREO QUE ESTOY HACIENDO LA FÓRMULA MAL 
-
 def preguntar_datos():
     cant_inversion = float(input("Introduzca la cantidad a invertir: "))
     int_anual = int(input("Introduzca el interés anual: "))
@@ -18,10 +16,10 @@ def preguntar_datos():
     return cant_inversion, int_anual, cant_anios
 
 def calcular_capital(cant_inversion, int_anual, cant_anios):
-    capital_anio1 = cant_inversion * (1 + int_anual / 100)
-    for i in range (0, cant_anios + 1):
-        capital_obtenido = capital_anio1 * cant_anios
-    print (capital_obtenido)
+
+    for i in range (1, cant_anios + 1):
+        cant_inversion *= 1 + int_anual / 100
+        print (f"El capital obtenido en el año {i} es: {cant_inversion:.2f} euros.")
 
 def main():
     cant_inversion, int_anual, cant_anios = preguntar_datos()
