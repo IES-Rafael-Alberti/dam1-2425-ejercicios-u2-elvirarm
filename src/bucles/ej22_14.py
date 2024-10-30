@@ -9,7 +9,7 @@ def bucle_numeros():
 
     while not salir != 0:
         entero = int(input("Introduce un número: "))
-        suma_num = entero + entero
+        suma_num += entero
 
         if entero == 0:
             salir = True
@@ -17,12 +17,10 @@ def bucle_numeros():
     if salir:
         return (suma_num)
 
-        suma_num += entero
-    if entero == 0:
-        print (suma_num)
+    
 
 def main():
-    bucle_numeros()
+    print(bucle_numeros())
 
 
 if __name__ == "__main__":
