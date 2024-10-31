@@ -16,7 +16,35 @@ Fin. Se leyeron 2 líneas completas.
 
 """
 
+##DARLE VUELTAS
+def introducir_titulo():
+    titulo = input("Introduce el título de un libro: ")
+    return titulo
+
+def leer_libros():
+    parar = False
+    
+    
+
+    while not parar:
+        titulo = introducir_titulo()
+        if titulo == "*":
+            parar = True
+        if titulo == "/":
+            terminar_linea(titulo)
+   
+
+def terminar_linea(titulo):
+    cont_num = 0
+    for digito in str(titulo):
+        if digito.isdigit:
+            cont_num += 1
+    print (f"En el {titulo} se han ingresado {cont_num} digitos")
+
+
 def main():
+    leer_libros()
+    
 
 if __name__ == "__main__":
     main()

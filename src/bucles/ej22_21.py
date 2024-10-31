@@ -3,7 +3,35 @@ Crear un programa que permita al usuario ingresar los montos de las compras de u
 
 """
 
+def pedir_monto():
+    monto = float(input("Introduce el monto: "))
+    return monto
+
+
+def gestionar_monto():
+    parar = False
+    suma_montos = 0
+    while not parar:
+        monto = pedir_monto()
+
+        if monto == 0:
+            parar = True
+        elif monto == monto < 0:
+            pedir_monto()
+        else:
+            suma_montos += monto
+
+    if parar:
+        if suma_montos > 1000:
+            print (f"{suma_montos * 0.1:.2f}")
+        else:
+            print (f"{suma_montos:.2f}")
+    
+
+
+
 def main():
+    gestionar_monto()
 
 if __name__ == "__main__":
     main()
