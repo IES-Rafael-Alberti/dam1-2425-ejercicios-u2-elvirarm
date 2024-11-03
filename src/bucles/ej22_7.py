@@ -2,7 +2,6 @@
 Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
 """
 
-# INTENTAR OPTIMIZAR XDIOS y arreglarle que lo haga desde el cerop
 
 def tabla_mult():
     for i in range (1,11):

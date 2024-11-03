@@ -8,7 +8,6 @@ Escribir un programa que pida al usuario un número entero y muestre por pantall
 9 7 5 3 1
 """
 
-#jajan't, piensa más, no va ni a la de 3.
 
 def pedir_entero():
     num = int(input("Introduzca un entero: "))

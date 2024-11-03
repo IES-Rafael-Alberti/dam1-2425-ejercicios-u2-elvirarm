@@ -2,45 +2,45 @@
 Solicitar al usuario que ingrese números enteros positivos y, por cada uno, imprimir la suma de los dígitos que lo componen. La condición de corte es que se ingrese el número -1. Al finalizar, mostrar cuántos de los números ingresados por el usuario fueron números pares.
 """
 
-def bucle_numeros(entero):
-    suma_num = 0
-
-    while entero != 0:
-
-        if entero > 0:
-            suma_num = suma_num + entero
-        entero = int(input("Introduce un número: "))
-
-
-    return suma_num
-
-def main():
-    entero = int(input("Introduce un número: "))
-    print(bucle_numeros(entero))
-
-
-if __name__ == "__main__":
-    main()
-
-
-    def bucle_numeros():
-    suma_num = 0
+def pedir_numeros():
+    lista_numeros = []
     salir = False
-
-    while not salir != 0:
-        entero = int(input("Introduce un número: "))
+    
+    while not salir:
         
 
-        if entero == 0:
+        num = input("Introduce números enteros positivos: ")
+        if num == "-1":
             salir = True
+        
+        else:
+            num = int(num)
+            suma = 0
 
-    if salir:
-        return (suma_num)
+            for digito in str(num):
+                suma += int(digito) 
 
+            print (f" La suma de los dígitos de {num} es igual a {suma}")
+
+            lista_numeros.append(num)
+
+            #.append se utiliza para agregar el valor () a una lista
     
+    return lista_numeros
+
+
+
+def contar_pares (lista_numeros):
+    num_pares = 0
+    for num in lista_numeros:
+        if num %2 == 0:
+            num_pares += 1
+    return num_pares
 
 def main():
-    print(bucle_numeros())
+    lista_numeros = pedir_numeros()
+    num_pares = contar_pares(lista_numeros)
+    print (f"Ingresaste {num_pares} números pares.")
 
 
 if __name__ == "__main__":
