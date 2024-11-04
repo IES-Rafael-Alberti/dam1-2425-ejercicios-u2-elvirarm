@@ -13,14 +13,14 @@ def pedir_ingresos():
 
 def comprobar_tributacion(edad,ingresos):
     if (edad < 16) or (ingresos <= 1000):
-        print("No puedes tributar.")
+        return "No puedes tributar."
     else:
-        print("Puedes tributar.")
+        return "Puedes tributar."
 
 def main():
     edad = pedir_edad()
     ingresos = pedir_ingresos()
-    comprobar_tributacion (edad,ingresos)
+    print(comprobar_tributacion (edad,ingresos))
 
 
 if __name__ == "__main__":

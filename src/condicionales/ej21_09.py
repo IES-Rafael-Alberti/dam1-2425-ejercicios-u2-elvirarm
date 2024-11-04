@@ -8,16 +8,16 @@ def pedir_edad():
 
 def comprobar_edad(edad):
     if edad < 4:
-        print("Felicidades, puedes entrar gratis.")
+        return "Felicidades, puedes entrar gratis."
     if (edad > 4) and (edad <= 18):
-        print("Tienes que pagar 5 euros.")
+        return "Tienes que pagar 5 euros."
     if edad > 18:
-        print ("Tienes que pagar 10 euros.")
+        return "Tienes que pagar 10 euros."
 
 
 def main():
     edad = pedir_edad()
-    comprobar_edad(edad)
+    print(comprobar_edad(edad))
 
 if __name__ == "__main__":
     main()

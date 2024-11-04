@@ -8,13 +8,13 @@ def pedir_numero():
 
 def numero_par_impar(numero):
     if numero %2 == 0:
-        print("Este número es par.")
+        return "Este número es par."
     else:
-        print("Este número es impar.")
+        return "Este número es impar."
 
 def main():
     numero = pedir_numero()
-    numero_par_impar(numero)
+    print(numero_par_impar(numero))
 
 if __name__ == "__main__":
     main()

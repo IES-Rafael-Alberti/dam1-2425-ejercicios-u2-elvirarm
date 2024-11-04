@@ -7,7 +7,7 @@ def bucle_numeros():
     suma_num = 0
     salir = False
 
-    while not salir != 0:
+    while not salir:
         entero = int(input("Introduce un número: "))
         suma_num += entero
 
@@ -15,7 +15,7 @@ def bucle_numeros():
             salir = True
 
     if salir:
-        return (suma_num)
+        return suma_num
 
     
 

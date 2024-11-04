@@ -3,7 +3,7 @@ Escribir un programa que pida al usuario una palabra y la muestre por pantalla 1
 """
 
 def pedir_palabra():
-    palabra = str(input("Introduce una palabra: "))
+    palabra = input("Introduce una palabra: ")
     return palabra
 
 def repetir_palabra (palabra):

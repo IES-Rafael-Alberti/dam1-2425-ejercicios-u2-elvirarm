@@ -11,11 +11,11 @@ def mostrar_numero(entero):
     for i in range(entero, -1, -1):
         serie += str(i) + ","
     
-    print (serie.rstrip(","))
+    return serie.rstrip(",")
 
 def main():
     entero = pedir_entero_positivo()
-    mostrar_numero(entero)
+    print(mostrar_numero(entero))
 
 if __name__ == "__main__":
     main()

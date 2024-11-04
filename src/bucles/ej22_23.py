@@ -15,36 +15,39 @@ Libro: *
 Fin. Se leyeron 2 líneas completas.
 
 """
+def contar_numeros_titulos(serie_titulos):
 
-##DARLE VUELTAS
-def introducir_titulo():
-    titulo = input("Introduce el título de un libro: ")
+    
+    contador = 0
+    for caracter in serie_titulos:
+        if caracter.isdigit(): 
+            contador += 1
+    return contador
+
+
+def introducir_titulos():
+    titulo = input("Libro: ")
     return titulo
-
-def leer_libros():
-    parar = False
-    
-    
-
-    while not parar:
-        titulo = introducir_titulo()
-        if titulo == "*":
-            parar = True
-        if titulo == "/":
-            terminar_linea(titulo)
-   
-
-def terminar_linea(titulo):
-    cont_num = 0
-    for digito in str(titulo):
-        if digito.isdigit:
-            cont_num += 1
-    print (f"En el {titulo} se han ingresado {cont_num} digitos")
 
 
 def main():
-    leer_libros()
-    
+   
+    serie_titulos =""
+    lineas_completas = 0
+    titulos = introducir_titulos()
+    while not titulos == "*":
+        serie_titulos +=  titulos + ","
+        titulos = introducir_titulos()
+
+        if titulos == "/":
+            lineas_completas += 1
+            contar_numeros = contar_numeros_titulos(serie_titulos)
+            print(f"Línea completa. Aparecen {contar_numeros} dígitos numéricos.")
+            contar_numeros = 0
+            serie_titulos =""
+
+    print(f"Se leyeron {lineas_completas} líneas completas.")
+        
 
 if __name__ == "__main__":
     main()
